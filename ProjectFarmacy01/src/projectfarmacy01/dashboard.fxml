@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectfarmacy01.dashcontrolador">
+   <children>
+      <AnchorPane fx:id="menu_formulario" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="640.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="45.0" prefWidth="200.0" styleClass="barra-form" stylesheets="@dashboardcss.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="30.0" prefWidth="1280.0" styleClass="top-form" stylesheets="@dashboardcss.css" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.8000000000001819" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <FontAwesomeIcon fill="#f51f1f" glyphName="MEDKIT" layoutX="14.0" layoutY="27.0" size="1.5em" />
+                              <Label layoutX="40.0" layoutY="12.0" text="Sistema de Gerenciamento da Farmacia" textFill="#39adcd">
+                                 <font>
+                                    <Font name="Bell MT Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="sair" layoutX="1224.0" layoutY="7.0" maxHeight="25.0" maxWidth="50.0" mnemonicParsing="false" onAction="#sair" prefHeight="25.0" prefWidth="50.0" styleClass="btn-voltar" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="4.0" />
+                              <Button layoutX="1156.0" layoutY="9.0" maxHeight="25.0" maxWidth="50.0" minWidth="29.0" mnemonicParsing="false" onAction="#minimizar" prefHeight="25.0" prefWidth="50.0" styleClass="btn-voltar" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="4.0" />
+                              <FontAwesomeIcon glyphName="CLOSE" layoutX="1243.0" layoutY="21.0" text="" AnchorPane.rightAnchor="24.9500001907345" AnchorPane.topAnchor="9.59999942779541" />
+                              <FontAwesomeIcon glyphName="MINUS" layoutX="1185.0" layoutY="24.0" AnchorPane.rightAnchor="82.9500001907345" AnchorPane.topAnchor="12.59999942779541" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane styleClass="barra-nav" stylesheets="@dashboardcss.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <FontAwesomeIcon fill="WHITE" glyphName="USER_MD" layoutX="60.0" layoutY="128.0" size="8em" text="" wrappingWidth="81.4285717010498" />
+                        <Label layoutX="65.0" layoutY="160.0" text="Bem Vindo " textFill="WHITE">
+                           <font>
+                              <Font name="Bell MT Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="username" layoutX="93.0" layoutY="181.0" text="Felton" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Line endX="77.0" layoutX="105.0" layoutY="225.0" startX="-88.0" stroke="WHITE" />
+                        <Button fx:id="btn_dashboard" layoutX="20.0" layoutY="251.0" mnemonicParsing="false" onAction="#alteraTela" prefHeight="38.0" prefWidth="147.0" styleClass="btn-voltar" stylesheets="@dashboardcss.css" text="Dashboard">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="DASHBOARD" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btn_venda" layoutX="19.0" layoutY="298.0" mnemonicParsing="false" onAction="#alteraTela" prefHeight="38.0" prefWidth="147.0" styleClass="btn-voltar" stylesheets="@dashboardcss.css" text="Vender Med.">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="MONEY" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btn_adicionar" layoutX="19.0" layoutY="345.0" mnemonicParsing="false" onAction="#alteraTela" prefHeight="38.0" prefWidth="147.0" styleClass="btn-voltar" stylesheets="@dashboardcss.css" text="Adicionar Med.">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="PLUS_CIRCLE" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="logout" layoutX="32.0" layoutY="526.0" mnemonicParsing="false" onAction="#logout" styleClass="btn-voltar" stylesheets="@dashboardcss.css" text="Voltar">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="dashboard_formulario" layoutX="55.0" layoutY="86.0" prefHeight="595.0" prefWidth="1086.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="368.0" prefWidth="1046.0" stylesheets="@dashboardcss.css">
+                                 <children>
+                                    <AreaChart fx:id="dashboard_grafico" layoutX="12.0" layoutY="19.0" prefHeight="342.0" prefWidth="1050.0" title="Grafico de Renda ">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </AreaChart>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="sombra" />
+                                    <String fx:value="background-branco" />
+                                 </styleClass>
+                              </AnchorPane>
+                              <AnchorPane layoutX="14.0" layoutY="395.0" prefHeight="185.0" prefWidth="1061.0" stylesheets="@dashboardcss.css">
+                                 <styleClass>
+                                    <String fx:value="background-branco" />
+                                    <String fx:value="sombra" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="28.0" layoutY="18.0" prefHeight="150.0" prefWidth="217.0" styleClass="card-view" stylesheets="@dashboardcss.css">
+                                       <children>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="CHECK" layoutX="8.0" layoutY="110.0" size="2em" />
+                                          <Label layoutX="21.0" layoutY="114.0" text="Medicamentos Disponiveis" textFill="WHITE">
+                                             <font>
+                                                <Font name="Bell MT Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="dashboard_disponiveis" layoutX="95.0" layoutY="23.0" prefHeight="88.0" prefWidth="41.0" text="  0" textFill="WHITE" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="81.0" AnchorPane.topAnchor="23.0">
+                                             <font>
+                                                <Font name="Bell MT Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="292.0" layoutY="18.0" prefHeight="150.0" prefWidth="217.0" styleClass="card-view" stylesheets="@dashboardcss.css">
+                                       <children>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="14.0" layoutY="124.0" size="2em" />
+                                          <Label layoutX="56.0" layoutY="104.0" text="Total de Clientes" textFill="WHITE">
+                                             <font>
+                                                <Font name="Bell MT Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="dashboard_clientes" layoutX="90.0" layoutY="31.0" prefHeight="150.0" prefWidth="217.0" text="  0" textFill="WHITE" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="73.0" AnchorPane.topAnchor="31.0">
+                                             <font>
+                                                <Font name="Bell MT Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="563.0" layoutY="18.0" prefHeight="150.0" prefWidth="217.0" styleClass="card-view" stylesheets="@dashboardcss.css">
+                                       <children>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="MEDKIT" layoutX="23.0" layoutY="123.0" size="2em" />
+                                          <Label fx:id="dashboard_venda" layoutX="69.0" layoutY="32.0" prefHeight="86.0" prefWidth="52.0" text="  0" textFill="WHITE">
+                                             <font>
+                                                <Font name="Bell MT Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="61.0" layoutY="103.0" text="Total de Vendas" textFill="WHITE">
+                                             <font>
+                                                <Font name="Bell MT Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="831.0" layoutY="18.0" prefHeight="150.0" prefWidth="217.0" styleClass="card-view" stylesheets="@dashboardcss.css">
+                                       <children>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="MONEY" layoutX="23.0" layoutY="123.0" size="2em" />
+                                          <Label layoutX="61.0" layoutY="103.0" text="Total de Ganhos" textFill="WHITE">
+                                             <font>
+                                                <Font name="Bell MT Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="dashboard_total1" layoutX="61.0" layoutY="25.0" prefHeight="101.0" prefWidth="94.0" text="\$ 0.00" textFill="WHITE" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="61.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="25.0">
+                                             <font>
+                                                <Font name="Bell MT Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="add_formulario" layoutX="57.0" layoutY="49.0" prefHeight="595.0" prefWidth="1080.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="9.0" prefHeight="243.0" prefWidth="1050.0" stylesheets="@dashboardcss.css">
+                                 <styleClass>
+                                    <String fx:value="sombra" />
+                                    <String fx:value="background-branco" />
+                                 </styleClass>
+                                 <children>
+                                    <TextField fx:id="add_farmacoID" layoutX="141.0" layoutY="25.0" styleClass="textfild" stylesheets="@dashboardcss.css" />
+                                    <Label layoutX="23.0" layoutY="29.0" text="Farmaco ID:">
+                                       <font>
+                                          <Font name="Bell MT Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="23.0" layoutY="76.0" text="Nome Cientifico: ">
+                                       <font>
+                                          <Font name="Bell MT Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="90.0" layoutY="127.0" text="Nome:">
+                                       <font>
+                                          <Font name="Bell MT Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="48.0" layoutY="163.0" text="Classificacao:">
+                                       <font>
+                                          <Font name="Bell MT Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="add_classificacao" layoutX="142.0" layoutY="157.0" onAction="#addFarmacoClassificacao" prefWidth="150.0" promptText="Selecionar" styleClass="textfild" />
+                                    <Label layoutX="419.0" layoutY="30.0" text="Status:">
+                                       <font>
+                                          <Font name="Bell MT Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="add_status" layoutX="479.0" layoutY="24.0" onAction="#addFarmacoStatus" prefWidth="150.0" promptText="Selecionar" styleClass="textfild" />
+                                    <AnchorPane layoutX="907.0" layoutY="13.0" prefHeight="150.0" prefWidth="115.0" stylesheets="@dashboardcss.css">
+                                       <styleClass>
+                                          <String fx:value="sombra" />
+                                          <String fx:value="background-branco" />
+                                       </styleClass>
+                                       <children>
+                                          <ImageView fx:id="add_imagem" fitHeight="156.0" fitWidth="117.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" styleClass="textfild" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Button fx:id="btn_imagem" layoutX="931.0" layoutY="186.0" mnemonicParsing="false" onAction="#addimagem" prefHeight="32.0" prefWidth="76.0" styleClass="card-view" stylesheets="@dashboardcss.css" text="Importar" />
+                                    <Button fx:id="btn_adiciona" layoutX="419.0" layoutY="186.0" mnemonicParsing="false" onAction="#addfarmaco" prefHeight="32.0" prefWidth="76.0" styleClass="card-view" text="Adicinar" visible="false" />
+                                    <Button fx:id="btn_updade" layoutX="514.0" layoutY="186.0" mnemonicParsing="false" onAction="#farmacoUpdate" prefHeight="32.0" prefWidth="76.0" styleClass="card-view" text="Actualizar" />
+                                    <Button fx:id="btn_limpar" layoutX="605.0" layoutY="186.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="76.0" styleClass="card-view" text="Limpar" />
+                                    <Button fx:id="btn_apagar" layoutX="695.0" layoutY="186.0" mnemonicParsing="false" onAction="#apagarFarmaco" prefHeight="32.0" prefWidth="76.0" styleClass="card-view" text="Apagar" />
+                                    <TextField fx:id="add_preco" layoutX="479.0" layoutY="80.0" styleClass="textfild" />
+                                    <Label layoutX="439.0" layoutY="87.0" text="Preco:">
+                                       <font>
+                                          <Font name="Bell MT Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="add_brand" layoutX="140.0" layoutY="68.0" styleClass="textfild" stylesheets="@dashboardcss.css" />
+                                    <TextField fx:id="add_nome" layoutX="141.0" layoutY="114.0" styleClass="textfild" stylesheets="@dashboardcss.css" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="14.0" layoutY="271.0" prefHeight="299.0" prefWidth="1051.0" stylesheets="@dashboardcss.css">
+                                 <styleClass>
+                                    <String fx:value="sombra" />
+                                    <String fx:value="background-branco" />
+                                 </styleClass>
+                                 <children>
+                                    <TextField fx:id="add_pesquisar" layoutX="42.0" layoutY="6.0" onKeyTyped="#procurarFarmaco" styleClass="textfild" />
+                                    <FontAwesomeIcon glyphName="SEARCH" layoutX="20.0" layoutY="24.0" />
+                                    <TableView fx:id="tabelafarmaco" layoutX="24.0" layoutY="50.0" onMouseClicked="#addtabelaFarmacoSelect" prefHeight="229.0" prefWidth="1003.0" styleClass="tabela">
+                                      <columns>
+                                        <TableColumn fx:id="tabela_farmacoID" prefWidth="123.0" text="Farmaco ID" />
+                                        <TableColumn fx:id="tabela_brand" prefWidth="150.0" text="Nome Cientidico" />
+                                          <TableColumn fx:id="tabela_nome" prefWidth="160.0" text="Nome" />
+                                          <TableColumn fx:id="tabela_classificacao" minWidth="0.0" prefWidth="183.0" text="Classificacao" />
+                                          <TableColumn fx:id="tabela_preco" prefWidth="152.0" text="Preco" />
+                                          <TableColumn fx:id="tabela_status" minWidth="0.0" prefWidth="128.0" text="Status" />
+                                          <TableColumn fx:id="tabela_validade" minWidth="0.0" prefWidth="96.0" text="Validade" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="venda_formulario" prefHeight="594.0" prefWidth="1064.0" stylesheets="@dashboardcss.css">
+                           <styleClass>
+                              <String fx:value="background-branco" />
+                              <String fx:value="sombra" />
+                           </styleClass>
+                           <children>
+                              <AnchorPane layoutX="764.0" layoutY="8.0" prefHeight="559.0" prefWidth="286.0" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="764.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="8.0">
+                                 <styleClass>
+                                    <String fx:value="background-branco" />
+                                    <String fx:value="sombra" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="25.0" layoutY="53.0" text="Classificacao:" />
+                                    <Label layoutX="25.0" layoutY="96.0" text="Farmaco ID:" />
+                                    <Label layoutX="25.0" layoutY="141.0" text="Brand:" />
+                                    <Label layoutX="25.0" layoutY="189.0" text="Nome:" />
+                                    <Button fx:id="btn_carrinho" layoutX="86.0" layoutY="324.0" mnemonicParsing="false" onAction="#compraADD" prefHeight="32.0" prefWidth="142.0" styleClass="card-view" stylesheets="@dashboardcss.css" text="Adicionar Carrinho" />
+                                    <Label layoutX="69.0" layoutY="373.0" text="Total:" />
+                                    <Label fx:id="compra_total" layoutX="123.0" layoutY="373.0" prefHeight="18.0" prefWidth="45.0" text="\$0.00" />
+                                    <Label layoutX="45.0" layoutY="404.0" prefHeight="18.0" prefWidth="81.0" text="Valor pago:" />
+                                    <TextField fx:id="compra_valorpago" layoutX="127.0" layoutY="400.0" onAction="#compraValorPago" prefHeight="26.0" prefWidth="121.0" styleClass="textfild" stylesheets="@dashboardcss.css" />
+                                    <Label fx:id="compra_balance" layoutX="127.0" layoutY="434.0" prefHeight="18.0" prefWidth="45.0" text="\$0.00" />
+                                    <Label layoutX="64.0" layoutY="434.0" prefHeight="18.0" prefWidth="67.0" text="Balance:" />
+                                    <Button fx:id="btn_comprar" layoutX="74.0" layoutY="487.0" mnemonicParsing="false" onAction="#compraPagamento" prefHeight="32.0" prefWidth="142.0" styleClass="card-view" stylesheets="@dashboardcss.css" text="Efectuar compra" />
+                                    <ComboBox fx:id="compra_classificacao" layoutX="124.0" layoutY="50.0" onAction="#compraClassificacao" prefWidth="150.0" styleClass="textfild" stylesheets="@dashboardcss.css" />
+                                    <ComboBox fx:id="compra_farmacoID" layoutX="124.0" layoutY="99.0" onAction="#compraFarmacoID" prefWidth="150.0" styleClass="textfild" stylesheets="@dashboardcss.css" />
+                                    <ComboBox fx:id="compra_brand" layoutX="124.0" layoutY="144.0" onAction="#compraBrand" prefWidth="150.0" styleClass="textfild" stylesheets="@dashboardcss.css" />
+                                    <ComboBox fx:id="compra_nome" layoutX="124.0" layoutY="183.0" onAction="#compraNome" prefWidth="150.0" styleClass="textfild" stylesheets="@dashboardcss.css" />
+                                    <Label layoutX="24.0" layoutY="232.0" text="Quantidade:" />
+                                    <Spinner fx:id="compra_quantidade" layoutX="125.0" layoutY="229.0" onMouseClicked="#compraQuantidade" styleClass="textfild" stylesheets="@dashboardcss.css" />
+                                    <Button fx:id="btn_LIMPAR" layoutX="107.0" layoutY="280.0" mnemonicParsing="false" onAction="#apagarVendas" prefHeight="32.0" prefWidth="100.0" styleClass="card-view" stylesheets="@dashboardcss.css" text="Limpar" />
+                                 </children>
+                              </AnchorPane>
+                              <TableView fx:id="tabela_compra" layoutX="8.0" layoutY="7.0" prefHeight="287.0" prefWidth="746.0" styleClass="tabela" stylesheets="@dashboardcss.css">
+                                <columns>
+                                  <TableColumn fx:id="tabelacompra_farmacoID" prefWidth="113.0" text="Farmaco ID" />
+                                  <TableColumn fx:id="tabelacompra_brand" prefWidth="125.0" text="Brand" />
+                                    <TableColumn fx:id="tabelacompra_nome" prefWidth="134.0" text="Nome" />
+                                    <TableColumn fx:id="tabelacompra_classificacao" prefWidth="159.0" text="Classificacao" />
+                                    <TableColumn fx:id="tabelacompra_quantidade" prefWidth="131.0" text="Quantidade" />
+                                    <TableColumn fx:id="tabelacompra_preco" prefWidth="134.0" text="Preco" />
+                                </columns>
+                              </TableView>
+                              <TableView fx:id="tabela_compra1" layoutX="8.0" layoutY="323.0" prefHeight="244.0" prefWidth="746.0" styleClass="tabela" stylesheets="@dashboardcss.css">
+                                 <columns>
+                                    <TableColumn fx:id="tabelacompra_farmacoID1" prefWidth="113.0" text="Farmaco ID" />
+                                    <TableColumn fx:id="tabelacompra_brand1" prefWidth="125.0" text="Brand" />
+                                    <TableColumn fx:id="tabelacompra_nome1" prefWidth="134.0" text="Nome" />
+                                    <TableColumn fx:id="tabelacompra_classificacao1" prefWidth="79.0" text="Classificacao" />
+                                    <TableColumn fx:id="tabelacompra_quantidade1" prefWidth="100.0" text="Quantidade" />
+                                    <TableColumn fx:id="tabelacompra_preco1" prefWidth="87.0" text="Preco" />
+                                    <TableColumn fx:id="tabelacompra_data1" prefWidth="107.0" text="Data" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="353.0" layoutY="297.0" />
+                              <Label layoutX="345.0" layoutY="298.0" text="Vendas Feitas">
+                                 <font>
+                                    <Font name="Bell MT Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,51 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 9, 2023, 10:21:11 PM
+    Author     : user
+*/
+
+
+.esquerda{
+    
+  -fx-background-color: linear-gradient(to top, #80FFDB, #5390D9); 
+    
+}
+
+
+.textfild{
+    
+    -fx-background-color: transparent; 
+    -fx-border-color: #000; 
+    -fx-border-width: .3px;  
+    -fx-border-radius: 4px;
+    -fx-font-size: 14px; 
+    -fx-font-family: "Tahoma"; 
+    
+}
+
+.textfild:focused{
+    
+   
+    -fx-border-color: linear-gradient(to top, #80FFDB 0%, #5390D9 100%); 
+    -fx-border-width: 1.4px;
+}
+
+.btn{
+    
+    -fx-background-color: #5390D9; 
+     -fx-border-radius:13px;
+    -fx-cursor: hand;
+    -fx-font-sixe: 13px; 
+    -fx-text-fill: #fff; 
+    -fx-font-family: "Arial"; 
+    
+}
+
+.btn:hover{
+   -fx-background-color: linear-gradient(to top, #80FFDB, #5390D9); 
+    
+}

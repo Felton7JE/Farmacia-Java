@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectfarmacy01.FXMLDocumentController">
+   <children>
+      <AnchorPane fx:id="pagina_login" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane layoutX="-2.0" prefHeight="592.0" prefWidth="222.0" styleClass="esquerda" stylesheets="@folhacss.css">
+               <children>
+                  <FontAwesomeIcon fill="#f51f1f" glyphName="MEDKIT" layoutX="53.0" layoutY="273.0" size="8em" wrappingWidth="16.0" />
+                  <Label layoutX="23.0" layoutY="300.0" prefHeight="17.0" prefWidth="174.0" text="Sistema de Gerenciamento " textFill="#e5ecee">
+                     <font>
+                        <Font name="Bell MT" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="218.0" prefHeight="590.0" prefWidth="546.0">
+               <children>
+                  <FontAwesomeIcon fill="#391b1b" glyphName="USER_MD" layoutX="254.0" layoutY="134.0" size="4em" text="" />
+                  <Label layoutX="148.0" layoutY="172.0" prefHeight="17.0" prefWidth="287.0" text="Bem vindo ao Sistema de Gerenciamento" textFill="#39adcd">
+                     <font>
+                        <Font name="Bell MT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="senha" layoutX="155.0" layoutY="295.0" onAction="#loginAdmin" prefHeight="40.0" prefWidth="235.0" promptText="Password" styleClass="textfild" stylesheets="@folhacss.css" />
+                  <TextField fx:id="usuario" layoutX="155.0" layoutY="227.0" onAction="#loginAdmin" prefHeight="40.0" prefWidth="235.0" promptText="Usuario" styleClass="textfild" stylesheets="@folhacss.css" />
+                  <Button fx:id="btnlogin" layoutX="221.0" layoutY="376.0" mnemonicParsing="false" onAction="#loginAdmin" prefHeight="40.0" prefWidth="105.0" styleClass="btn" stylesheets="@folhacss.css" text="Login" />
+                  <Button fx:id="btnsair" layoutX="480.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnsair" styleClass="btn" stylesheets="@folhacss.css" text="Sair" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
